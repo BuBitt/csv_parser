@@ -17,7 +17,7 @@ import os
 
 
 def path(caminho):
-    with open(caminho) as csv_arq:
+    with open(caminho, encode="utf-8") as csv_arq:
         leitor_csv = csv.DictReader(csv_arq)
         global csv_dict
         csv_dict = [dicio for dicio in leitor_csv][0].copy()
